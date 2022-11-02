@@ -91,7 +91,7 @@ public class Main {
                     salir=true;
                     break;
                 default:
-                    System.out.println("Solo números entre 1 y 11");
+                    System.out.println("Solo números entre 1 y 12");
             }
         }
          
