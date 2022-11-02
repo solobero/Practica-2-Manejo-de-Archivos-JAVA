@@ -23,6 +23,8 @@ public class Main {
         int opcion;
 
         while(!salir){
+            System.out.println("Bienvenido a nuestro sistema de consultas...");
+            System.out.println("Hecho por: Juan Fernando Romero y Verónica Zapata :)\n");
             System.out.println("1. Listar empleados");
             System.out.println("2. Empleados en un rango determinado");
             System.out.println("3. Coleccion de empleados por departamento");
@@ -85,6 +87,7 @@ public class Main {
                     System.out.println(" ");
                     break;
                 case 12:
+                    System.out.println("Gracias por usar nuestro sistema...");
                     salir=true;
                     break;
                 default:
@@ -118,6 +121,7 @@ public class Main {
 
     //Imprimir empleados de manera ordenada usando el Comparator anterior
     public static void ordApe(){
+        System.out.println("\t\t  ID \t  |Nombre|Apellido|Salario|Departamento");
         empleados.stream().sorted(apellidoLuegoNombre).forEach(System.out::println);
     }
 
@@ -214,13 +218,13 @@ public class Main {
     //Promedio salario general
     public static void promSalT(){
         System.out.println("");
-        System.out.println("Promedio del salario general: "+empleados.stream().mapToDouble(Empleado::getSalario).average().getAsDouble());
+        System.out.println("Promedio del salario general: "+empleados.stream().mapToDouble(Empleado::getSalario).average().getAsDouble()+" pesos.");
     }
 
     //Valor total de la nómina
     public static void TotalNom(){
         System.out.println("");
-        System.out.println("Valor total de la nómina: "+empleados.stream().mapToDouble(Empleado::getSalario).sum());;
+        System.out.println("Valor total de la nómina: "+empleados.stream().mapToDouble(Empleado::getSalario).sum()+" pesos.");;
     }
 
 }
